@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.8" client="site" method="upgrade">
+	<name>MOD_COCONDIRS</name>
+	<creationDate>05.08.2019</creationDate>
+	<author>XAKEPoku</author>
+	<authorEmail>xakepok@xakepok.com</authorEmail>
+	<authorUrl>http://xakepok.com</authorUrl>
+	<copyright>A copyright</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>1.0</version>
+	<description>MOD_COCONDIRS_XML_DESCRIPTION</description>
+
+	<files>
+		<filename module="mod_cocondirs">mod_cocondirs.php</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+		<filename>mod_cocondirs.xml</filename>
+	</files>
+
+	<!-- Update servers -->
+	<updateservers>
+		<server type="extension" priority="1" name="cocondirs">https://www.xakepok.com/Thrid/updates/mod_cocondirs.xml</server>
+	</updateservers>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="domain"
+					type="url"
+					label="MOD_COCONDIRS_URL_LABEL"
+					description="MOD_COCONDIRS_URL_DESCRIPTION"
+					hint="https://www.example.com"
+					filter="url"
+					validate="url"
+				/>
+			</fieldset>
+			<fieldset
+					name="advanced">
+				<field
+						name="moduleclass_sfx"
+						type="text"
+						label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+						description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
